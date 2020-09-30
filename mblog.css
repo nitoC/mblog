@@ -1,0 +1,236 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	color:black;
+	text-decoration: none;
+	font-family: arial;
+	text-align: center;
+	/*border:2px dashed green;*/
+}
+body{
+	overflow-x:hidden;
+	width:100vw;
+}
+main{
+	background:url("elegantM.jpg");
+	display: flex;
+	flex-basis: 25% 50% 25%;
+	background-position: center;
+	background-color: rgba(255,255,255,0.95);
+	background-blend-mode: overlay;
+	height: 93vh;
+	margin-top: 4%;
+}
+#main h1{
+	margin-top:22%;
+	margin-bottom: auto;
+	font-family: gigi;
+	color:#000;
+
+}
+h3{
+color:#008080;	
+}
+/* first section design*/
+#hot{
+	flex-basis: 25%;
+}
+#hot .hotLink{
+	border-bottom: 2px solid #ccc;
+}
+#hot img{
+	width:95%;
+	height:50%;
+}
+#new-list{
+	margin-top: 4px;
+}
+/*main second section design with id main*/
+#main{
+	flex-basis: 50%;
+}
+#HOT-list{
+	flex-basis: 25%;
+}
+#album img{
+	width:70%;
+	height: 100%;
+}
+#album{
+	margin-bottom: 4%;
+}
+#albumLink{
+	background-color: #ff1493;
+	color:white;
+	padding:0.5em;
+	border-radius: 2px;
+}
+[type="search"]{
+	border-radius: 3px;
+	border:1px solid #ccc;
+	outline: none
+}
+button img{
+	cursor: pointer;
+	background-color: #fff;
+	height: 10px;
+	border:none;
+	outline: none;
+	width: 20px;
+	padding: 0;
+	margin: 0;
+
+}
+button{
+	cursor: pointer;
+	background-color: #fff;
+	height: 10px;
+	border:none;
+	outline: none;
+	width: 20px;
+	padding: 0;
+	margin: 0;
+}
+/*header design and top navigation design*/
+header{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	background-color: #ff1493;
+	height:;
+}
+#sideMobile{
+	height:0;
+	display: none;
+}
+nav{
+	align-self: center;
+	margin-right: 2%;
+}
+nav a{
+	padding:0.6em;
+	transition: 0.2s;
+}
+nav a:hover ,.aClass:hover{
+	color: white;
+	background-color: #008080;
+}
+h1 span{
+	color:wheat;
+	font-style: italic;
+	font-family:courier New;
+}
+h1{
+	color: wheat;
+}
+/*side navigation menu for categories*/
+#categoriesLink div{
+	
+}
+#categoriesLink{
+    position:absolute;
+    right:0;
+    z-index: 1;
+	width:0;
+	height: 100vh;
+	transition: 1s;
+}
+#categoriesLink a{
+	padding:1em;
+	color:#008080;
+	border-bottom: 2px solid #eee;
+	display: block;
+	background-color: white;
+	white-space: nowrap;
+}
+#categoriesLink a:hover{
+	color:white;
+	background-color: #008080;
+}
+/*third ssection design*/
+li {
+    padding-top:2em;
+	width:80%;
+	border-bottom: 2px solid #eee;
+	transition: 0.4s;
+}
+#HOT-list{
+	margin-left:20%;
+}
+ul{
+	list-style-type: none;
+}
+li:hover{
+	background-color: #eee;
+	border-radius: 2px;
+}
+/*for mobile*/
+@media (max-width:700px) {
+	main{
+		display: flex;
+		flex-direction: column;
+	}
+	#topN{
+		margin-top: 30%;
+		display: none;
+		height: 0;
+		order: 2;
+	}
+	nav a{
+
+		display:block;
+		width:100vw;
+		order:3;
+	}
+	#searchBox{
+		display:none;
+	}
+	button{
+		display: none;
+	}
+	header{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		
+	}
+	#sideMobile{
+		display: block;
+		margin-top: 3%;
+		margin-right: 5%;
+	}
+	header h1{
+		margin-top: 2%;
+	}
+	#hotNav{
+		margin-top: 5%;
+	}
+	#main h1{
+        visibility: hidden;
+        margin-top:0;
+		}
+		#categoriesLink {
+	width:0;
+	height:0;
+	z-index: 22;
+		}
+		main{
+			margin-top:10%;
+		}
+		header{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	background-color: #ff1493;
+	height:;
+}
+}

@@ -1,0 +1,154 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Ed-mus</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="mblog.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+       <header id="header">
+       <h1><span>Ed-</span>mu</h1>
+       <nav id="topN">
+       	<div id="topn">
+       		<a href="">New</a>
+       		<a href="">concerts</a>
+       		<a href="">Artists</a>
+       		<a href="#" id="categories">categories</a>
+       		<a href="">Hot</a>
+       	</div>
+       </nav>
+       <div class="sideMobile" id="sideMobile">
+            <a href="#" id="bars"><i class="fa fa-bars" style="font-size:28px;color:#008080;"></i></a>
+        </div>
+       </header>
+       <div id="categoriesLink">
+       	<a href="" >Hip Hop</a>
+       	<a href="" >jazz</a>
+       	<a href="" >pop</a>
+       	<a href="" >R&B</a>
+       	<a href="" >Reggae</a>
+       	<a href="" >Rock</a>
+       	<a href="" >Soft Rock</a>
+       	<a href="" >Classic</a>
+       	<a href="" >Country Music</a>
+       </div>
+
+       <main>
+       	<section id="hot">
+       		<h3>HOT pick Today</h3>
+       		<a href="">
+       		  <img src="adekunle.jpeg" alt="hot pick image">
+       		   <a href="#" class="hotLink">Something different by Adekunle Gold</a>
+       	    </a>
+       		
+       		<div id="new-list">
+       			<h3>New pick Today</h3>
+       			<a href="">
+       			  <img src="adaKizz.jpg" alt="">
+       			  <a href="" class="hotLink">Ada by Kizz Daniel</a>
+       		    </a>
+       			
+       		</div>
+       	</section>
+       	<section id="main">
+       		<div id="searchBox">
+       		<input type="search" name="">
+       		<button><img src="https://img.icons8.com/ios/50/000000/search--v1.png" alt="icon" /></button>
+       	    </div>
+       		<h1 id="caption">COME LET'S PARTEEEY</h1>
+       		<div id="album" class="album">
+       			<h3>Top album this week</h3>
+       			<img src="ladygaga.jpg" alt="album image"><br/>
+       			<a href="">chromatica by lady gaga</a>
+       		</div>
+       		<a href="" id="albumLink">Album list</a>
+       	</section>
+       	<section id="hotNav">
+       		<h3>Hot list</h3>
+       		<div id="HOT-list">
+       		 <ul>
+       			<li><a href="">Something different by adekunnle Gold</a></li>
+       			<li><a href="">worry by Lyta</a></li>
+       			<li><a href="">Money fit me by Syno</a></li>
+       			<li><a href="">Nakupenda by Chike</a></li>
+       			<li><a href="">Watching over me by Chike</a></li>
+       			<li><a href="">Blow by wizkid</a></li>
+       		 </ul>
+       		</div>
+       	</section>
+
+       </main>
+       <script>
+       var side=document.getElementById('categories');
+       var sideLink=document.getElementById('categoriesLink');
+       var bars=document.getElementById('bars');
+       var catAnchor=document.querySelectorAll("#categoriesLink a");
+       //sidenav responsive in mobile functionl       
+       side.addEventListener("click",function (){
+       	if(document.getElementById('topN').style.height==="100vh"){
+       		if(sideLink.style.width===""){
+            sideLink.style.right="0px";
+       	sideLink.style.top="39px";
+       	sideLink.style.width="30%";
+       	sideLink.style.height="70%";
+       	//catAnchor.forEach(a=>a.style.width="100%")
+       	  }
+       	  else{
+       	  	sideLink.style.width="";
+       		side.style.backgroundColor="";
+       		side.style.color="";
+       		//catAnchor.forEach(a=>a.style.width="")
+       	  }
+       	}
+
+       	else if(sideLink.style.width===""){
+       		sideLink.style.width="30%";
+       		side.style.backgroundColor="#008080";
+       		side.style.color="white";
+       		//catAnchor.forEach(a=>a.style.width="100%")
+       	}
+       	else{
+       		sideLink.style.width="";
+       		catAnchor.forEach(a=>a.style.width="")
+       		side.style.backgroundColor="";
+       		side.style.color="";
+       	}
+       })
+       bars.addEventListener("click",function (){
+       	if (document.getElementById('topN').style.display===""){
+       		console.log(true);
+       	document.getElementById('topN').style.display="block";
+       	document.getElementById('topN').style.height="100vh";
+       	document.getElementById('header').style.flexDirection="column";
+       	    }
+       	    else{
+       	    	console.log(false);
+       	    	document.getElementById('topN').style.display="";
+       	    	document.getElementById('topN').style.height="";
+       	    	document.getElementById('header').style.flexDirection="";
+       	    }
+       })
+       //function to change height and flex direction of header in screen resize
+
+       /*window.addEventListener("resize",function (){
+         	console.log(true)
+         	if(document.getElementById('topN').style.height==="100vh"){
+         document.getElementById('topN').style.height="";
+                }
+         document.getElementById('header').style.flexDirection="";  
+       })*/
+       </script>
+
+        
+    </body>
+</html>
