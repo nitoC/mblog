@@ -171,10 +171,18 @@ li:hover{
 }
 /*for mobile*/
 @media (max-width:700px) {
+	html{
+		overflow-x: hidden;
+	}
+	body{
+		overflow-x: hidden;
+	}
+
 	main{
 		padding: 2em;
 		display: flex;
 		flex-direction: column;
+		overflow-x: hidden;
 	}
 	#topN{
 		margin-top: 30%;
